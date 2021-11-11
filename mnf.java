@@ -3,31 +3,43 @@ public class mnf  {
 	public static void main(String[] Strings) {  
 		
 		Scanner sc = new Scanner(System.in);  
+		 
+		double a,b,c,D;
+		System.out.print("a: "); 
+		a = sc.nextDouble();
 		
-		System.out.print("a: ");  
-		double a = sc.nextDouble();  
+		System.out.println("b: ");
+		b = sc.nextDouble();
 		
-		System.out.print("b: ");  
-		double b = sc.nextDouble(); 
+		System.out.println("c: ");
+		c = sc.nextDouble();
 		
-		System.out.print("c: ");  
-		double c = sc.nextDouble(); 
+		D = Math.sqrt(Math.pow(b, 2) - 4*a*c);
 		
-		double d= b * b - 4.0 * a * c;  
-		if (d> 0.0)   
-		{  
-		double r1 = (-b + Math.pow(d, 0.5)) / (2.0 * a);  
-		double r2 = (-b - Math.pow(d, 0.5)) / (2.0 * a);  
-		System.out.println("x1: " + r1 + "  " + r2);  
-		}   
-		else if (d == 0.0)   
-		{  
-		double r1 = -b / (2.0 * a);  
-		System.out.println("Die Wurzel ist " + r1);  
-		}   
-		else   
-		{  
-		System.out.println("Wurzeln sind keine realen Zahlen");  
-		}  
-		}  
-		} 
+		if (D>0) {
+			System.out.println("2 Lösungen.");	
+		} else if (D==0) {
+			System.out.println("1 Lösung.");
+		} else {
+			System.out.println("Keine Lösung.");
+		}
+		
+		if (D>0) {
+			
+			double x = (-b + Math.sqrt(b*b-4*a*c));
+			double xfinal = x / (2*a);
+			double y = (-b - Math.sqrt(b*b-4*a*c));
+			double yfinal = y/(2*a);
+			System.out.println("x1 = "+xfinal+"\n"+"x2 = "+yfinal);
+			
+		} else if(D == 0) {
+			
+			double x = (-b + Math.sqrt(b*b-4*a*c));
+			double xfinal = x /(2*a);
+			System.out.println("Nullstelle: "+xfinal);
+			
+			
+			}
+		}
+			
+	}
