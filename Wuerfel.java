@@ -12,7 +12,6 @@ public class Wuerfel {
 		
 		int[] wuerfe = new int[7];
 		Random rd = new Random();
-		
 		while(wuerfe[0]!=n){
 		
 		@SuppressWarnings("unused")
