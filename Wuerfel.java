@@ -7,7 +7,7 @@ public class Wuerfel {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Wie oft soll der Würfel gewürfelt werden? ");
+		System.out.println("Wie oft soll der Würfel gewürfelt werden?");
 		int n = sc.nextInt();
 		
 		int[] wuerfe = new int[7];
