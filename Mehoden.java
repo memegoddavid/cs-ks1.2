@@ -1,7 +1,8 @@
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class Mehoden {
-
+static int counter = 0;
 	public static void main(String[] args) {
 		
 		//sagHallo();
@@ -14,6 +15,9 @@ public class Mehoden {
 		System.out.println(com(11, 15));
 		System.out.println(fläche(3, 4, 5) + " FE");
 		System.out.println(ver(3,3));
+		System.out.println(mul(10,5));
+		System.out.println(potrek(5,2));
+		System.out.println(fibo(60));
 	}
 	
 	//Befehle ohne Rückgabewert 
@@ -59,7 +63,7 @@ public class Mehoden {
 			double ergebnis = a / b;
 			System.out.println(ergebnis);
 		}
-		System.out.println(Double.NEGATIVE_INFINITY);
+		//System.out.println(Double.NEGATIVE_INFINITY);
 	}
 	
 	public static int com(int a , int b) {
@@ -89,4 +93,50 @@ public class Mehoden {
 			return b;
 		}
 	}
+	
+	public static int fak(int n) {
+		if(n<=1) {
+			return 1;
+		}else {
+			return n*fak(n-1);
+		}
+	}
+	
+	public static int mul(int a, int b) {
+		if(a == 0 || b == 0) {
+			return 0;
+		}else {
+			return a + mul(a, b - 1);
+		}
+	}
+	
+	public static int potrek(int a, int b) {
+		if(b==0) {
+			return 1;
+			
+		}else {
+			return a*potrek(a, b-1);
+		}
+	}
+	
+	public static long fibo(long n) {
+		counter++;
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+        else
+            return fibo(n - 1) + fibo(n - 2);
+    }
+	
+	 public static int BinoKo (int n, int k)
+	   {
+	      if (k == 1)
+	         return n;
+	      else if (n >= k && k == 0)
+	         return 1;
+	      else
+	         return (n * BinoKo(n - 1, k - 1) / k);
+	 
+	   }
 }
