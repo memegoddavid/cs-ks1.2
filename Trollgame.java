@@ -71,20 +71,20 @@ public class Trollgame extends JFrame {
   } // end of main
   
   public void jButton1_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
+    // TODO hier Quelltext einfÃ¼gen
     
   } // end of jButton1_ActionPerformed
 
   public void jButton1_MouseEntered(MouseEvent evt) {
-    // TODO hier Quelltext einfügen
+    // TODO hier Quelltext einfÃ¼gen
     int xb = jButton1.getLocation().x;
     int yb = jButton1.getLocation().x;
-    //Höhe und Breite des Buttons
+    //HÃ¶he und Breite des Buttons
     int w = jButton1.getWidth();
     int h = jButton1.getHeight();
     //Position des Cursors (aus dem MouseEvent evt)
-    int xm = evt.getX();
-    int ym = evt.getY();
+    int xm = xb+evt.getX();
+    int ym = yb+evt.getY();
     
     int x,y;
     
@@ -99,8 +99,8 @@ public class Trollgame extends JFrame {
   } // end of jButton1_MouseEntered
 
   public void jButton1_MouseClicked(MouseEvent evt) {
-    // TODO hier Quelltext einfügen
-    System.out.println("Göttliches Aim, Mashallah");
+    // TODO hier Quelltext einfÃ¼gen
+    System.out.println("GÃ¶ttliches Aim, Mashallah");
     System.exit(0);
   } // end of jButton1_MouseClicked
 
